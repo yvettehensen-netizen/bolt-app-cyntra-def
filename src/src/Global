@@ -1,0 +1,164 @@
+/* === 🌍 GLOBAL THEME – CYNTRA INSIGHTS === */
+
+/* 📚 Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  /* 🎨 Brandkleuren */
+  --cyntra-gold: #d6b48e;
+  --cyntra-dark: #0e0e0e;
+  --cyntra-gray: #1e1e1e;
+  --cyntra-text: #f8f5f2;
+  --cyntra-accent: #e9cba7;
+  --cyntra-danger: #b43c2e;
+
+  /* ✨ Layout */
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌑 Baseline */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cyntra-dark);
+  color: var(--cyntra-text);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* 🪶 Typografie */
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--cyntra-gold);
+  letter-spacing: 0.3px;
+}
+
+p, li, span {
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+/* ✨ Knoppen */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* 🌟 Navbar Scroll Glow */
+.nav-glow {
+  box-shadow: 0 2px 15px rgba(214, 180, 142, 0.15);
+  transition: box-shadow 0.4s ease;
+}
+
+/* 🎇 Hover Goud Effect */
+.hover-gold {
+  color: var(--cyntra-gold);
+  transition: color 0.3s ease;
+}
+
+.hover-gold:hover {
+  color: var(--cyntra-accent);
+}
+
+/* 🧭 Cards & Panels */
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--cyntra-gold);
+}
+
+/* ✨ Gold Gradient Text */
+.gold-shine {
+  background: linear-gradient(90deg, #d6b48e, #e9cba7, #d6b48e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: goldflow 6s ease-in-out infinite;
+}
+
+@keyframes goldflow {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* ⚡ Fade In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🖤 Footer Styling */
+footer {
+  background: #0a0a0a;
+  border-top: 1px solid #1e1e1e;
+}
+
+footer a {
+  color: var(--cyntra-gold);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--cyntra-accent);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
